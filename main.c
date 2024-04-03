@@ -129,7 +129,7 @@ size_t infix_to_postfix(const char *expression, size_t exp_size, char **postfix,
 
         if (c == ')')
         {
-            if (last_optype != OPERAND)
+            if (last_optype == OPERATOR)
             {
                 printf("syntax is invalid\n");
                 print_exp(expression, exp_size, idx_exp, 3);
